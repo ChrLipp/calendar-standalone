@@ -23,4 +23,6 @@ need to adapt the config every year.
 For some config examples have a look at the unit tests `test/*ConfigSpec.ts
 
 *This project is no longer maintained. A new implementation which provides a
-http://momentjs.com/[moment.js]‚ implementation is currently developed.*
+http://momentjs.com/[moment.js] integration is currently developed, see
+https://github.com/ChrLipp/moment-dayinfo[moment-dayinfo].*
+
