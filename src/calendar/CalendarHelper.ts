@@ -7,17 +7,6 @@ module CalendarModule
 		year        : number;
 	}
 
-	/** Weedays Enumeration */
-	export enum Weekday {
-		Monday = 1,
-		Tuesday,
-		Wednesday,
-		Thursday,
-		Friday,
-		Saturday,
-		Sunday
-	}
-
 	/**
 	 * Calender helper functionality for the Gregorian calendar.
 	 * The function addDays should normally work with Julian Days. For performance reasons
@@ -130,9 +119,13 @@ module CalendarModule
 
 			// adjust to the given week day and the week
 			var delta = weekday - CalendarHelper.getWeekday(dateReference);
-			if (weekCount > 0) {
+			if ((weekCount < 0) && (delta < 0)) {
+				weekCount++;
+			}
+			else if ((weekCount > 0) && (delta > 0)) {
 				weekCount--;
 			}
+
 
 			return CalendarHelper.addDays(dateReference, delta + weekCount * 7);
 		}

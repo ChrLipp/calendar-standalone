@@ -1,7 +1,16 @@
-/// <reference path="CalendarHelper.ts" />
-
 module CalendarModule
 {
+	/** Weedays Enumeration */
+	export enum Weekday {
+		Monday = 1,
+		Tuesday,
+		Wednesday,
+		Thursday,
+		Friday,
+		Saturday,
+		Sunday
+	}
+
 	/** Entry for a named day in the calendar. */
 	export interface CalenderDayEntry {
 		name        : string;       // Name of the day (set by the config data below)
